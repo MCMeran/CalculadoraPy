@@ -1,0 +1,39 @@
+# Sistema de calificaciones
+calificaciones = [85, 67, 92, 74, 58]
+
+# 1. Mostrar todas las calificaciones
+print("Calificaciones:", calificaciones)
+
+# 2. Mostrar una calificación determinada usando su índice
+indice = int(input("Ingrese el índice (0-4) para ver una calificación: "))
+print("Calificación en índice", indice, ":", calificaciones[indice])
+
+# 3. Calcular el promedio
+promedio = sum(calificaciones) / len(calificaciones)
+print("Promedio general:", promedio)
+
+# 4. Identificar la calificación más alta
+print("Calificación más alta:", max(calificaciones))
+
+# 5. Identificar la calificación más baja
+print("Calificación más baja:", min(calificaciones))
+
+# 6. Contar cuántos estudiantes aprobaron (>=70)
+aprobados = 0
+reprobados = 0
+for nota in calificaciones:
+    if nota >= 70:
+        aprobados += 1
+    else:
+        reprobados += 1
+
+print("Estudiantes aprobados:", aprobados)
+print("Estudiantes reprobados:", reprobados)
+
+# 8. Modificar una calificación
+indice_mod = int(input("Ingrese el índice de la calificación a modificar (0-4): "))
+nueva_nota = int(input("Ingrese la nueva calificación: "))
+calificaciones[indice_mod] = nueva_nota
+
+# 9. Mostrar nuevamente el vector actualizado
+print("Calificaciones actualizadas:", calificaciones)
